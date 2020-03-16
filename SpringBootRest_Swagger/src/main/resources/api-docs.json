@@ -1,0 +1,97 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "Student Details",
+		"version": "7.1",
+		"title": "SpringBootRest_swagger",
+		"termsOfService": "www.cooltees.com",
+		"contact": {
+			"name": "8085324400"
+		},
+		"license": {
+			"name": "www.cooltees.co/license",
+			"url": "www.cooltees.co"
+		}
+	},
+	"host": "localhost:9091",
+	"basePath": "/",
+	"tags": [
+		{
+			"name": "student-controller",
+			"description": "Student Controller"
+		}
+	],
+	"paths": {
+		"/hi": {
+			"post": {
+				"tags": [
+					"student-controller"
+				],
+				"summary": "get",
+				"operationId": "getUsingPOST",
+				"consumes": [
+					"application/xml",
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "stu",
+						"description": "stu",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Students"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Students": {
+			"type": "object",
+			"properties": {
+				"students": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/Student"
+					}
+				}
+			}
+		},
+		"Student": {
+			"type": "object",
+			"properties": {
+				"last": {
+					"type": "string"
+				},
+				"name": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

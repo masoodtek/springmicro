@@ -1,0 +1,7 @@
+server:
+  port: 8082
+spring:
+  main:
+    banner-mode: console
+  banner:
+    location: mastech.txt

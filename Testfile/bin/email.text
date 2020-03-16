@@ -1,0 +1,14 @@
+Hi {name} {last},Thank you for registering to Registeration. 
+
+Please note, the following registration forms are incomplete. You can login here to complete them. You registered with the following email:{email} 
+
+Below are the forms you have yet to complete. Please complete registration no later than registration due date.
+
+Temp-password: {pazzword}
+
+<a href="http://localhsot:8082/addpazzword?userEmail="+{email}></a>
+Thanks,
+
+MasoodAkhtar
+cooltees@gmail.com
+7974212422

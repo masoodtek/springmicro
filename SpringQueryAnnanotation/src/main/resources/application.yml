@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: system
+    password: admin
+  jpa:
+    properties: 
+      hibernate:
+       format_sql: true
+       show_sql: true
+    hibernate:
+       ddl_auto: update
+

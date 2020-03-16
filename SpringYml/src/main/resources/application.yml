@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+    
+---
+spring:
+  profiles: dev
+  datasource:
+    password: amit
+    username:  amit
+  
+server:
+    port: 8080
+---
+spring:
+  profiles: mas
+  
+server:
+    port: 8082
+#if you want to assing with vm arrgument then use this command
+# -Dspring.profiles.active = profile name.
